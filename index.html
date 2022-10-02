@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">  <title>CodePen - Infinite Scrolling Cards with GSAP and ScrollTrigger (continuous snap)</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /></head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./tilt.css">
+  <link rel="stylesheet" href="./nav.css">
+  <link rel="stylesheet" href="./dark.css">
+  
+<body>
+<!-- partial:index.partial.html -->
+
+
+
+<nav class="navmain" role="navigation">
+	<div id="menuToggle">
+	  <!--
+	  A fake / hidden checkbox is used as click reciever,
+	  so you can use the :checked selector on it.
+	  -->
+	  <input type="checkbox" />
+	  
+	  <!--
+	  Some spans to act as a hamburger.
+	  
+	  They are acting like a real hamburger,
+	  not that McDonalds stuff.
+	  -->
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  
+	  <!--
+	  Too bad the menu has to be inside of the button
+	  but hey, it's pure CSS magic.
+	  -->
+	  <ul id="menu">
+		<a  class="link" href="./projects/project.html"><li>Projects</li></a>
+		<a   class="link" href="./projects/project.html"><samll class="small">- &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="./projects/project.html"><samll class="small">-  &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="./projects/project.html"><samll class="small">- &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="./projects/project.html"><samll class="small">- &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="./projects/project.html"><samll class="small">- &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="./projects/project.html"><samll class="small">- &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="./projects/project.html"><li>About</li></a>
+		<a   class="link" href="./projects/project.html"><li>Contact</li></a>
+	  </ul>
+	</div>
+  </nav>
+
+  <div style="z-index: 99999999999999; position:absolute;" class="container">
+	<divstyle="z-index: 99999999999999; position:absolute;"  class="transition">
+	  <div style="z-index: 99999999999999; position:absolute;"  class="cover cover1"></div>
+	  <divstyle="z-index: 99999999999999; position:absolute;"  class="cover cover2"></div>
+	  <div style="z-index: 99999999999999; position:absolute;"  class="cover cover3"></div>
+	</div>
+ </div>
+<div class="overlay">
+	<div class="o-left"></div>
+	<div class="o-right"></div>
+</div>
+<div class="nav">
+		<div>
+<h1 class="logo">Karlo <span class="surname">Lauc</span></h1>
+</div>
+</div>
+
+<div class="dark-mode">
+  <input type="checkbox" class='checkbox' id='checkbox'>
+  <label for="checkbox" class='label'>
+    <div class="ball"></div>
+  </label>
+</div>
+
+
+<div class="hover-left"></div>
+<div class="hover-right"></div>
+
+
+<div class="gallery">
+	<ul class="cards">
+		<li>
+			<article>
+				<a class="link" href="./projects/project.html">  <img   class="projectimg" style="width: 40vw; height: 22vw;" src="./img4.png" alt=""></a>
+			</article>
+		   <div class="content"><span class="number">01</span> <span class="name">Lorem Ipsum</span></div></li>
+		<li>				<article>
+			<a class="link" href="./projects/project.html"> 	<img class="projectimg"  style="width: 40vw; height: 22vw;" src="./img3.png" alt=""></a>
+		  </article> <div class="content"><span class="number">02</span> <span class="name">Lorem Ipsum</span></div></li>
+		<li>			<article>
+			<a class="link" href="./projects/project.html"> 	<img class="projectimg"  style="width: 40vw; height: 22vw;" src="./img2.png" alt=""></a>
+		  </article><div class="content"><span class="number">03</span> <span class="name">Lorem Ipsum</span></div></li>
+		<li>		<article>
+			<a class="link" href="./projects/project.html"> <img class="projectimg"  style="width: 40vw; height: 22vw;" src="./img1.png" alt=""></a>
+		  </article><div class="content"><span class="number">04</span> <span class="name">Lorem Ipsum</span></div></li>
+		<li>			<article>
+			<a class="link" href="./projects/project.html"> 	<img   class="projectimg"  style="width: 40vw; height: 22vw;" src="./karlo.jpeg" alt=""></a>
+		  </article><div class="content"><span class="number">05</span> <span class="name">Lorem Ipsum</span></div></li>
+	</ul>
+	<div class="actions">
+		<button class="prev"><span class="material-symbols-outlined">
+			arrow_left
+			</span></button>
+		<button class="next"><span class="material-symbols-outlined">
+			arrow_right
+			</span></button>
+	</div>
+</div>
+
+
+  
+<!-- partial -->
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script><script  src="./script.js"></script>
+<script  src="./transition.js"></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/multiscroll.js/0.1.7/jquery.multiscroll.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js'></script><script  src="./tilt.js"></script>
+<script  src="./dark.js"></script>
+
+</body>
+</html>

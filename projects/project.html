@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Multiscroll</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/multiscroll.js/0.1.7/jquery.multiscroll.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/vegas/2.3.1/vegas.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./nav.css">
+<link rel="stylesheet" href="./dark.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+
+
+<nav class="navmain" role="navigation">
+	<div id="menuToggle">
+	  <!--
+	  A fake / hidden checkbox is used as click reciever,
+	  so you can use the :checked selector on it.
+	  -->
+	  <input type="checkbox" />
+	  
+	  <!--
+	  Some spans to act as a hamburger.
+	  
+	  They are acting like a real hamburger,
+	  not that McDonalds stuff.
+	  -->
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  
+	  <!--
+	  Too bad the menu has to be inside of the button
+	  but hey, it's pure CSS magic.
+	  -->
+	  <ul id="menu">
+		<a  class="link" href="file:///Users/gustav/Desktop/karlo-web/projects/project.html"><li>Projects</li></a>
+		<a   class="link" href="file:///Users/gustav/Desktop/karlo-web/projects/project.html"><samll class="small">- &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="file:///Users/gustav/Desktop/karlo-web/projects/project.html"><samll class="small">-  &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="file:///Users/gustav/Desktop/karlo-web/projects/project.html"><samll class="small">- &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="file:///Users/gustav/Desktop/karlo-web/projects/project.html"><samll class="small">- &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="file:///Users/gustav/Desktop/karlo-web/projects/project.html"><samll class="small">- &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="file:///Users/gustav/Desktop/karlo-web/projects/project.html"><samll class="small">- &nbsp Lorem Ipsum</samll></a>
+		<a   class="link" href="file:///Users/gustav/Desktop/karlo-web/projects/project.html"><li>About</li></a>
+		<a   class="link" href="file:///Users/gustav/Desktop/karlo-web/projects/project.html"><li>Contact</li></a>
+	  </ul>
+	</div>
+  </nav>
+<div class="overlay">
+	<div class="o-left"></div>
+	<div class="o-right"></div>
+</div>
+<div class="nav">
+		<div>
+<h1 class="logo">Karlo <span class="surname">Lauc</span></h1>
+
+</div>
+
+</div>
+
+
+<div class="dark-mode">
+  <input type="checkbox" class='checkbox' id='checkbox'>
+  <label for="checkbox" class='label'>
+    <div class="ball"></div>
+  </label>
+</div>
+
+<div class="pocetak"></div>
+
+<div class="infodiv"><p class="infop">Lorem ipsum dolor sit amet, consectetur adipiscing elit,  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  sdunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcdo conccaecat cupidatat non proident  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat., sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+
+
+<div class="why-multiscroll-container">
+  <div id="why-bg" style="position:fixed;height:100%;width:100%;"></div>
+  
+  <div class="title">
+    <h2 class="titlebg">Lorem Ipsum</h2>
+    <h1 class="h1">Lorem Ipsum</h1>
+    </div>
+
+<div id="multiscroll">
+  
+  <div class="ms-left" id="left" style="background-image: url("https://i.pinimg.com/originals/03/6c/78/036c780432bdafef9319144958ff0cf7.png"); background-size: cover; ">
+    <div class="ms-section">
+      <div id="divimgleftone" class="divimg">
+      <img id="imgleftone" class="img" src=".//img1.png">
+      </div>
+    </div>
+    <div class="ms-section">
+      <div id="divimglefttwo"   class="divimg">
+      <img id="imglefttwo" class="img" src=".//img2.png">  
+       </div> 
+     </div>
+    <div  class="ms-section">
+      <div id="divimgleftthree"   class="divimg">
+      <img id="imgleftthree"  class="img" src=".//img3.png"> </div>  
+     </div>
+    <div  class="ms-section">
+      <div id="divimgleftfour"   class="divimg">
+      <img id="imgleftfour"  class="img" src=".//img4.png">  </div> 
+    </div>
+  </div>
+  <div class="ms-right">
+    <div class="ms-section" style="background-color: rgb(23, 23, 23);">
+      <div id="divimgrightone"  class="divimg">
+      <img id="imgrightone" class="img" src=".//img4right.png">
+      </div>
+    </div>
+    <div class="ms-section" style="background-color: rgb(23, 23, 23);">
+      <div id="divimgrighttwo"    class="divimg">
+      <img id="imgrighttwo"  class="img" src=".//img3right.png">
+      </div>
+    </div>
+    <div class="ms-section" style="background-color:rgb(23, 23, 23);">
+      <div  id="divimgrightthree"  class="divimg">
+      <img id="imgrightthree"  class="img"  src=".//img2right.png">
+      </div>
+    </div>
+    <div class="ms-section" style="background-color:rgb(23, 23, 23);">
+      <div id="divimgrightfour"  class="divimg">
+      <img id="imgrightfour" class="img" src=".//img1right.png"> </div>  
+      </div>
+  </div>
+  
+</div>
+<nav class="updown-navigation1 navigation1">
+  <ul class="list-unstyled">
+    <li class="up"><span><i class="fa fa-angle-up"></i></span></li>
+    <img src="plus.png" class="plus">
+    <li class="down"><span><i class="fa fa-angle-down"></i></span></li>
+  </ul>
+</nav>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/multiscroll.js/0.1.7/jquery.multiscroll.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vegas/2.3.1/vegas.min.js'></script><script  src="./script.js"></script><script  src="./dark.js"></script>
+
+</body>
+</html>
